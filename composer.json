@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "PrestaShop\\Module\\Skeleton\\": "src/"
+      "PrestaShop\\Module\\DemoJsRouting\\": "src/"
     },
     "config": {
       "prepend-autoloader": false

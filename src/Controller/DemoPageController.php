@@ -13,18 +13,15 @@
  */
 declare(strict_types=1);
 
-namespace PrestaShop\Module\DemoProductForm\Controller;
+namespace PrestaShop\Module\DemoJsRouting\Controller;
 
-use ModuleAdminController;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+use Symfony\Component\HttpFoundation\Response;
 
-/**
- * Provides reusable methods for all admin module controllers
- */
-abstract class AbstractAdminController extends ModuleAdminController
+class DemoPageController extends FrameworkBundleAdminController
 {
-    public function __construct()
+    public function indexAction(): Response
     {
-        parent::__construct();
-        $this->bootstrap = true;
+        return new Response('ok');
     }
 }

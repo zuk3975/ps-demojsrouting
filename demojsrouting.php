@@ -10,23 +10,22 @@
 
 declare(strict_types=1);
 
-use PrestaShop\Module\DemoProductForm\Install\Installer;
+use PrestaShop\Module\DemoJsRouting\Install\Installer;
 
 if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 class DemoJsRouting extends Module
 {
     public $tabs = [
         [
-            'name' => 'Demo page', // Fallback when the translation is unavailable
-            'class_name' => 'AdminGamification',
-            'parent_class_name' => 'ShopParameters',
-            'wording' => 'Merchant Expertise', // Translation key
-            'wording_domain' => 'Modules.Gamification.Admin', // Translation domain
+            'class_name' => 'DemoPageController',
+            'visible' => true,
+            'name' => 'Demo page',
+            'parent_class_name' => 'CONFIGURE',
         ],
     ];
 
