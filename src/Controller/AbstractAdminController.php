@@ -13,7 +13,7 @@
  */
 declare(strict_types=1);
 
-namespace PrestaShop\Module\Skeleton\Controller;
+namespace PrestaShop\Module\DemoProductForm\Controller;
 
 use ModuleAdminController;
 

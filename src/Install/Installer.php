@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-namespace PrestaShop\Module\Skeleton\Install;
+namespace PrestaShop\Module\DemoProductForm\Install;
 
 use Db;
 use Module;

@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-use PrestaShop\Module\Skeleton\Install\Installer;
+use PrestaShop\Module\DemoProductForm\Install\Installer;
 
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -18,19 +18,29 @@ if (!defined('_PS_VERSION_')) {
 
 require_once __DIR__.'/vendor/autoload.php';
 
-class Skeleton extends Module
+class DemoJsRouting extends Module
 {
+    public $tabs = [
+        [
+            'name' => 'Demo page', // Fallback when the translation is unavailable
+            'class_name' => 'AdminGamification',
+            'parent_class_name' => 'ShopParameters',
+            'wording' => 'Merchant Expertise', // Translation key
+            'wording_domain' => 'Modules.Gamification.Admin', // Translation domain
+        ],
+    ];
+
     public function __construct()
     {
-        $this->name = 'skeleton';
+        $this->name = 'demojsrouting';
         $this->author = 'PrestaShop';
         $this->version = '1.0.0';
         $this->ps_versions_compliancy = ['min' => '1.7.7.0', 'max' => _PS_VERSION_];
 
         parent::__construct();
 
-        $this->displayName = $this->l('Skeleton');
-        $this->description = $this->l('Skeleton module description');
+        $this->displayName = $this->l('Demo js routing');
+        $this->description = $this->l('Example module of javascript router usage in BO');
     }
 
     /**
