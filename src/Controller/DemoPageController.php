@@ -22,6 +22,6 @@ class DemoPageController extends FrameworkBundleAdminController
 {
     public function indexAction(): Response
     {
-        return new Response('ok');
+        return $this->render('@Modules/demojsrouting/views/templates/admin/demo_page.html.twig');
     }
 }
